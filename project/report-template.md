@@ -24,7 +24,7 @@ It would make sense to work more with a datetime variable. Month, in general, sh
 
 ### Create a table with the models you ran, the hyperparameters modified, and the kaggle score.
 
-model 	timelimit 	ad_features 	score
+|model |	timelimit |	ad_features |	score|
 0 	initial 	time_limit = 600 	none 	1.79388
 1 	add_features 	time_limit=400 	Separated date and time, and categorical features 	0.63596
 2 	hpo1 	time_limit=400 	hyperparameters adjusted 	0.48958
