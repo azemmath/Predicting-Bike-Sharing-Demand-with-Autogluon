@@ -13,7 +13,7 @@ The top ranked problem was the model with hyperparameters tuned. I changed numbe
 The exploratory analysis found that we have timedate variable, season, and weather variables, treated initially as integers. It was more meningful to separate the timedate onto month, day, and hour. Since season is not an ordered variable (winter is not less than spring) it makes sense to treat it as categorical. The same goes for the weather variable.
 
 ### How much better did your model preform after adding additional features and why do you think that is?
-Both scores kaggle and the model training scores decreased significantly. This due to inclusion of additional features. Datestamp is mostly useless variable if not separated on month, date, and hour. At the same time, bike demand probably signifcantly depends on a month and a time of a day. Season should be treated as a categorical variable and separated into dummy variables since it is not ordered.
+Both scores kaggle and the model training scores decreased significantly. This due to inclusion of additional features. Datestamp is mostly useless variable if not separated on month, date, and hour. At the same time, bike demand probably signifcantly depends on a month and a time of a day. Season should be treated as a categorical variable and separated into dummy variables since it is not ordered. The additional features such as time of the day and the month probably have a significant influence on the count of bikes rented, correspondingly, the predictions improved significantly.
 
 ## Hyper parameter tuning
 ### How much better did your model preform after trying different hyper parameters?
