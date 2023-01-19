@@ -33,11 +33,11 @@ model 	timelimit 	ad_features 	score
 
 ### Create a line plot showing the top model score for the three (or more) training runs during the project.
 
-![image1.png](img/model_train_score.png)
+![image1.png](image1.png)
 
 ### Create a line plot showing the top kaggle score for the three (or more) prediction submissions during the project.
 
-![image2.png](img/model_test_score.png)
+![image2.png](image1.png)
 
 ## Summary
 We trained several models predicting bike demand based on weather and calendar data. It seems to be essential to treat certain features as categorical. Overall performance of the final model was satisfcatory, even though not as good as top kaggle submissions. 
