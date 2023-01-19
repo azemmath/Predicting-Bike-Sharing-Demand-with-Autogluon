@@ -24,12 +24,15 @@ It would make sense to work more with a datetime variable. Month, in general, sh
 
 ### Create a table with the models you ran, the hyperparameters modified, and the kaggle score.
 
-|model |	timelimit |	ad_features |	score|
-0 	initial 	time_limit = 600 	none 	1.79388
-1 	add_features 	time_limit=400 	Separated date and time, and categorical features 	0.63596
-2 	hpo1 	time_limit=400 	hyperparameters adjusted 	0.48958
-3 	hpo2 	time_limit=400 	hyperparameters adjusted 	0.49205
-4 	hpo3 	time_limit=400 	hyperparameters adjusted 	0.49215
+|model|num_epochs|learning_rate|num_leaves|score|
+|--|--|--|--|--|
+|initial|10|5e-4|36|1.79388|
+|add_features|10|5e-4|36|0.63596|
+|hpo1|12|5e-4|50|0.48958|
+|hpo2|20|5e-4|50|0.49205|
+|hpo3|20|5e-3|50|0.49215|
+
+
 
 ### Create a line plot showing the top model score for the three (or more) training runs during the project.
 
