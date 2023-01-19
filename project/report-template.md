@@ -10,36 +10,34 @@ The top ranked problem was the model with hyperparameters tuned. I changed numbe
 
 ## Exploratory data analysis and feature creation
 ### What did the exploratory analysis find and how did you add additional features?
-TODO: Add your explanation
+The exploratory analysis found that we have timedate variable, season, and weather variables, treated initially as integers. It was more meningful to separate the timedate onto month, day, and hour. Since season is not an ordered variable (winter is not less than spring) it makes sense to treat it as categorical. The same goes for the weather variable.
 
 ### How much better did your model preform after adding additional features and why do you think that is?
-TODO: Add your explanation
+Both scores kaggle and the model training scores decreased significantly. This due to inclusion of additional features. Datestamp is mostly useless variable if not separated on month, date, and hour. At the same time, bike demand probably signifcantly depends on a month and a time of a day. Season should be treated as a categorical variable and separated into dummy variables since it is not ordered.
 
 ## Hyper parameter tuning
 ### How much better did your model preform after trying different hyper parameters?
-TODO: Add your explanation
+It seems like tweaking learning rate, number of epochs, and number of leaves improved the model approximately 23% by kaggle score.
 
 ### If you were given more time with this dataset, where do you think you would spend more time?
-TODO: Add your explanation
+It would make sense to work more with a datetime variable. Month, in general, should be treated as a categorical variable similarly to season. Similar thing can be doen for the hour. We could have also ran the model for a longer period of time. Unfortunately, in my case my kernel would interrupt if I tried to run it for longer periods, so I was only able to do time_limit=400. Nevertheless, the final score seemed to be satisfactory.
 
 ### Create a table with the models you ran, the hyperparameters modified, and the kaggle score.
-|model|hpo1|hpo2|hpo3|score|
-|--|--|--|--|--|
-|initial|?|?|?|?|
-|add_features|?|?|?|?|
-|hpo|?|?|?|?|
+
+model 	timelimit 	ad_features 	score
+0 	initial 	time_limit = 600 	none 	1.79388
+1 	add_features 	time_limit=400 	Separated date and time, and categorical features 	0.63596
+2 	hpo1 	time_limit=400 	hyperparameters adjusted 	0.48958
+3 	hpo2 	time_limit=400 	hyperparameters adjusted 	0.49205
+4 	hpo3 	time_limit=400 	hyperparameters adjusted 	0.49215
 
 ### Create a line plot showing the top model score for the three (or more) training runs during the project.
 
-TODO: Replace the image below with your own.
-
-![model_train_score.png](img/model_train_score.png)
+![image1.png](img/model_train_score.png)
 
 ### Create a line plot showing the top kaggle score for the three (or more) prediction submissions during the project.
 
-TODO: Replace the image below with your own.
-
-![model_test_score.png](img/model_test_score.png)
+![image2.png](img/model_test_score.png)
 
 ## Summary
-TODO: Add your explanation
+We trained several models predicting bike demand based on weather and calendar data. It seems to be essential to treat certain features as categorical. Overall performance of the final model was satisfcatory, even though not as good as top kaggle submissions. 
