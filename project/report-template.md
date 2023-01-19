@@ -1,12 +1,12 @@
 # Report: Predict Bike Sharing Demand with AutoGluon Solution
-#### NAME HERE
+#### Anna Zemlyanova
 
 ## Initial Training
 ### What did you realize when you tried to submit your predictions? What changes were needed to the output of the predictor to submit your results?
-TODO: Add your explanation
+The template asked us to delete all the negative entries since there cannot be negative demand for bikes. In my case, I didnot have negative entries. Additionally, since the training was based on a regression model, the output results where floating point, not integers.
 
 ### What was the top ranked model that performed?
-TODO: Add your explanation
+The top ranked problem was the model with hyperparameters tuned. I changed number of epochs, number of leaves, and number of trials for the hyperparameters of TabularPredictor.
 
 ## Exploratory data analysis and feature creation
 ### What did the exploratory analysis find and how did you add additional features?
